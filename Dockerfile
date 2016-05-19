@@ -15,7 +15,6 @@ RUN chkconfig iptables off
 RUN sed -i 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN  /etc/init.d/sshd start
 
-COPY root/ /root
 COPY gpadmin/ /home/gpadmin/
 RUN chown -R  gpadmin:gpadmin /home/gpadmin
 
